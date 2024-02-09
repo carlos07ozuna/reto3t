@@ -1,0 +1,31 @@
+// Variables
+var usuarios = []; // Lista de usuarios registrados
+var contadorId = 1; // Contador para generar el ID único
+
+// Función para registrar un nuevo usuario
+function registrarUsuario(nombre, correo) {
+  // Generar un objeto usuario con nombre, correo e ID único
+  var usuario = {
+    nombre: nombre,
+    correo: correo,
+    id: contadorId
+  };
+
+  // Aumentar el contador de ID para el próximo registro
+  contadorId++;
+
+  // Agregar el usuario al listado de usuarios
+  usuarios.push(usuario);
+
+  // Mostrar en consola que el registro se realizó con éxito
+  console.log("Usuario registrado correctamente:", usuario);
+}
+
+// Ejemplo de uso
+registrarUsuario("Juan", "juan@example.com");
+registrarUsuario("María", "maria@example.com");
+registrarUsuario("Pedro", "pedro@example.com");
+
+// Imprimir la lista de usuarios registrados
+console.log("Listado de usuarios registrados:");
+console.log(usuarios);
